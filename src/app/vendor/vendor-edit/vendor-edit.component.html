@@ -1,0 +1,56 @@
+
+<app-menu></app-menu>
+
+<h3>In Vendor Edit</h3>
+<table *ngIf="vendor">
+  <tr>
+    <td>code </td>
+    <input [(ngModel)]="vendor.code" type="text">
+  </tr>
+  <tr>
+    <td> name </td>
+    <input [(ngModel)]="vendor.name" type="name">
+  </tr>
+  <tr>
+    <td> address </td>
+    <input [(ngModel)]="vendor.address" type="text">
+  </tr>
+  <tr>
+    <td> city </td>
+    <input [(ngModel)]="vendor.city" type="text">
+  </tr>
+  <tr>
+    <td> state </td>
+    <input [(ngModel)]="vendor.state" type="text">
+  </tr>
+  <tr>
+    <td> zip </td>
+    <input [(ngModel)]="vendor.zip" type="text">
+  </tr>
+    <tr>
+    <td> phone </td>
+    <input [(ngModel)]="vendor.phone" type="text">
+  </tr>
+  <tr>
+    <td> email </td>
+    <input [(ngModel)]="vendor.email" type="text">
+  </tr>
+    <tr>
+    <td>ispreferred</td>
+    <input [(ngModel)]="vendor.ispreferred" type="checkbox">
+  </tr>
+  <tr>
+    <td> active </td>
+    <input [(ngModel)]="vendor.active" type="checkbox">
+  </tr>
+</table>
+<button (click) = "save()">Save</button>
+
+
+
+
+
+
+
+
+

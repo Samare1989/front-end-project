@@ -1,0 +1,50 @@
+<app-menu></app-menu>
+<h3>User details</h3>
+
+<table *ngIf="user" class="table">
+  <tr>
+    <th scope="col">Id: </th>
+    <td>{{user.id}}</td>
+  </tr>
+  <tr>
+    <th scope="col">UserName: </th>
+    <td>{{user.userName}}</td>
+  </tr>
+  <tr>
+    <th scope="col">FirstName: </th>
+    <td>{{user.firstName}}</td>
+  </tr>
+  <tr>
+    <th scope="col">LastName: </th>
+    <td>{{user.lastName}}</td>
+  </tr>
+  <tr>
+    <th scope="col">Phone: </th>
+    <td>{{user.phone}}</td>
+  </tr>
+  <tr>
+    <th scope="col">Email: </th>
+    <td>{{user.email}}</td>
+  </tr>
+  <tr>
+    <th scope="col">Admin? </th>
+    <td>{{user.isAdmin? "Yes" : "No"}}</td>
+  </tr>
+  <tr>
+    <th scope="col">Reviwer? </th>
+    <td>{{user.isReviwer ? "Yes" :"No"}}</td>
+  </tr>
+  <tr>
+    <th scope="col">Active? </th>
+    <td>{{ user.Active ? "Active" :"No"}}</td>
+  </tr>
+</table>
+<button (click)= "delete()" class= "btn btn-danger">Delete</button>
+<a routerlink="/user/list"> | return to list</a>
+<p>
+  <a routerLink="/user/list">Back</a>
+</p>
+
+<!-- <p *ngIf="user">
+  {{user.username}}
+</p> -->

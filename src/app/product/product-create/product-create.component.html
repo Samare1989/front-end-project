@@ -1,0 +1,37 @@
+
+<div>
+  <tr>
+    <td> Vendor</td>
+    <td>
+      <select [(ngModel)] = "product.VendorId">
+        <option *ngfor ="let vendor of vendors" [(ngvalue)] = "vendor.Id">{{vendor.name}}</option>
+      </select>
+    </td>
+  </tr>
+  <tr>
+    <td> partNumber</td>
+    <td><input[ ngModel] = "product.partNumber" class = "input string" type = "text"></td>
+  </tr>
+  <tr>
+    <td>name</td>
+    <td><input [(ngModel)] ="product.name" class= "input string" type = "text"></td >
+  </tr>
+  <tr>
+    <td>price</td>
+    <td><input [(ngModel)] = "product.price" class= "input string" type = "text"></td>
+    <tr>
+        <td>unit</td>
+        <td><input [(ngModel)] = "product.unit" class= "input string" type = "text"></td>
+        <tr>
+            <td>photopath</td>
+            <td><input [(ngModel)] = "product.photopath" class= "input string" type = "text"></td>
+            <tr>
+                <td>active</td>
+                <td><input [(ngModel)] = "product.active" class= "input string" type = "text"></td>
+            </tr>
+            
+        </tr>
+    </tr>
+  </tr>
+</div>
+

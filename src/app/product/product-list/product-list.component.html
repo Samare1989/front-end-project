@@ -1,0 +1,42 @@
+<app-menu></app-menu>
+<div>
+  <div class="heading">
+    <span class="pagetitle"> Product List</span>
+    <span class="create"> |<a routerLink="/product/create">create</a></span>
+    <span class="search">|<input [(ngModel)]="searchCriteria" type="text"></span>
+    
+  </div>
+  <table class ="table table">
+  <thead>
+  <tr class="colheading">
+    <td>VendorId</td>
+    <td>partNumber</td>
+    <td>name</td>
+    <td>price</td>
+    <td>unit</td>
+    <td>photopath</td>
+    <td>zip</td>
+    <td class="bool">active</td>
+    
+  </tr>
+</thead>
+<tbody>
+  <tr *ngFor="let product of products | search:searchCriteria">
+    <td>{{product.VendorId}}</td>
+    <td>{{product.partNumber}}</td>
+    <td>{{product.name}}</td>
+    <td>{{product.price}}</td>
+    <td>{{product.unit}}</td>
+    <td>{{product.photopath}}</td>
+    <td>{{product.zip}}</td>
+    <td class="bool">{{product. active}}</td>
+    
+    <td>
+    <a routerLink="/product/detail/{{product.id}}">Detail</a> |
+    <a routerLink="/product/edit/{{product.id}}">Edit</a>
+  </td>
+
+  </tr>
+</tbody>
+</table>
+</div>

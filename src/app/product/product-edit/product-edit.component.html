@@ -1,0 +1,33 @@
+<app-menu></app-menu>
+
+<h3>In Product Edit</h3>
+<table *ngIf="vendor">
+  <tr>
+    <td> VendorId </td>
+    <input [(ngModel)]="product.VendorId" type="text">
+  </tr>
+  <tr>
+    <td> partNumber </td>
+    <input [(ngModel)]="product.partNumber" type="name">
+  </tr>
+  <tr>
+    <td> name </td>
+    <input [(ngModel)]="product.name" type="text">
+  </tr>
+  <tr>
+    <td> price</td>
+    <input [(ngModel)]="product.price" type="text">
+  </tr>
+  <tr>
+    <td> unit </td>
+    <input [(ngModel)]="product.unit" type="text">
+  </tr>
+  <tr>
+    <td> photopath</td>
+    <input [(ngModel)]="product.photopath" type="text">
+    <tr>
+    <td> active </td>
+    <input [(ngModel)]="product.active" type="checkbox">
+  </tr>
+</table>
+<button (click) = "save()">Save</button>

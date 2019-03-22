@@ -1,0 +1,39 @@
+<app-menu></app-menu>
+<h3> Product details</h3>
+
+<table *ngIf="product" class="table">
+  <tr>
+    <th scope="col"> VendorId: </th>
+    <td>{{product.VendorId}}</td>
+  </tr>
+  <tr>
+    <th scope="col"> partNumber: </th>
+    <td>{{product.partNumber}}</td>
+  </tr>
+  <tr>
+    <th scope="col">name: </th>
+    <td>{{product.name}}</td>
+  </tr>
+  <tr>
+    <th scope="col">price: </th>
+    <td>{{product.price}}</td>
+  </tr>
+  <tr>
+    <th scope="col">unit: </th>
+    <td>{{product. unit}}</td>
+  </tr>
+  <tr>
+    <th scope="col">photopath: </th>
+    <td>{{product.photopath}}</td>
+  </tr>
+    <tr>
+    <th scope="col">active </th>
+    <td>{{ product.active }}</td>
+  </tr>
+</table>
+<button (click)= "delete()" class= "btn btn-danger">Delete</button>
+<a routerlink="/product/list"> | return to list</a>
+<p>
+  <a routerLink="/product/list">Back</a>
+</p>
+
